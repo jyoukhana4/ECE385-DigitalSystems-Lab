@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+WARNING: 0ns : none of the conditions were true for unique case from File:C:/Vivado/lab4/lab4.srcs/sources_1/imports/lab4/Control.sv:33
+WARNING: 0ns : none of the conditions were true for unique case from File:C:/Vivado/lab4/lab4.srcs/sources_1/imports/lab4/Control.sv:115
+WARNING: 120ns : none of the conditions were true for unique case from File:C:/Vivado/lab4/lab4.srcs/sources_1/imports/lab4/Control.sv:115

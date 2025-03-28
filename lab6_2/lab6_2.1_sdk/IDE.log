@@ -1,0 +1,574 @@
+06:00:14 DEBUG : Logs will be stored at 'C:/Vivado/lab6_2/lab6_2.1_sdk/IDE.log'.
+06:00:19 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Vivado\lab6_2\lab6_2.1_sdk\temp_xsdb_launch_script.tcl
+06:00:19 INFO  : Registering command handlers for Vitis TCF services
+06:00:19 INFO  : Platform repository initialization has completed.
+06:00:24 INFO  : XSCT server has started successfully.
+06:00:24 INFO  : plnx-install-location is set to ''
+06:00:24 INFO  : Successfully done setting XSCT server connection channel  
+06:00:24 INFO  : Successfully done setting workspace for the tool. 
+06:00:24 INFO  : Successfully done query RDI_DATADIR 
+06:01:30 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+06:01:30 INFO  : Result from executing command 'getPlatforms': 
+06:01:30 WARN  : An unexpected exception occurred in the module 'platform project logging'
+06:01:31 INFO  : Platform 'mb_usb_hdmi_top' is added to custom repositories.
+06:01:33 INFO  : Platform 'mb_usb_hdmi_top' is added to custom repositories.
+06:02:40 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+06:02:40 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+06:02:41 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+06:02:54 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+06:03:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+06:03:19 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+06:03:19 INFO  : 'jtag frequency' command is executed.
+06:03:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+06:03:20 INFO  : Device configured successfully with "C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+06:03:20 INFO  : Context for processor 'microblaze_0' is selected.
+06:03:20 INFO  : Hardware design and registers information is loaded from 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+06:03:20 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+06:03:20 INFO  : Context for processor 'microblaze_0' is selected.
+06:03:20 INFO  : System reset is completed.
+06:03:23 INFO  : 'after 3000' command is executed.
+06:03:23 INFO  : Context for processor 'microblaze_0' is selected.
+06:03:24 INFO  : The application 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+06:03:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+06:03:24 INFO  : Context for processor 'microblaze_0' is selected.
+06:03:24 INFO  : 'con' command is executed.
+06:03:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+06:03:24 INFO  : Launch script is exported to file 'C:\Vivado\lab6_2\lab6_2.1_sdk\mb_usb_system\_ide\scripts\debugger_mb_usb-default.tcl'
+06:06:22 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+06:06:31 INFO  : Disconnected from the channel tcfchan#2.
+06:06:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+06:06:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+06:06:41 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+06:08:06 DEBUG : Logs will be stored at 'C:/Vivado/lab6_2/lab6_2.1_sdk/IDE.log'.
+06:08:07 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Vivado\lab6_2\lab6_2.1_sdk\temp_xsdb_launch_script.tcl
+06:08:12 INFO  : Platform repository initialization has completed.
+06:08:12 INFO  : XSCT server has started successfully.
+06:08:12 INFO  : plnx-install-location is set to ''
+06:08:12 INFO  : Registering command handlers for Vitis TCF services
+06:08:12 INFO  : Successfully done setting XSCT server connection channel  
+06:08:12 INFO  : Successfully done query RDI_DATADIR 
+06:08:12 INFO  : Successfully done setting workspace for the tool. 
+06:08:14 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+06:08:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+06:08:22 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+06:08:22 INFO  : 'jtag frequency' command is executed.
+06:08:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+06:08:24 INFO  : Device configured successfully with "C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+06:08:24 INFO  : Context for processor 'microblaze_0' is selected.
+06:08:24 INFO  : Hardware design and registers information is loaded from 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+06:08:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+06:08:24 INFO  : Context for processor 'microblaze_0' is selected.
+06:08:24 INFO  : System reset is completed.
+06:08:27 INFO  : 'after 3000' command is executed.
+06:08:27 INFO  : Context for processor 'microblaze_0' is selected.
+06:08:27 INFO  : The application 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+06:08:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+06:08:27 INFO  : Context for processor 'microblaze_0' is selected.
+06:08:27 INFO  : 'con' command is executed.
+06:08:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+06:08:27 INFO  : Launch script is exported to file 'C:\Vivado\lab6_2\lab6_2.1_sdk\mb_usb_system\_ide\scripts\debugger_mb_usb-default.tcl'
+06:21:19 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+06:22:48 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+06:22:57 INFO  : Disconnected from the channel tcfchan#1.
+06:22:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+06:22:59 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+06:22:59 INFO  : 'jtag frequency' command is executed.
+06:22:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+06:23:00 INFO  : Device configured successfully with "C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+06:23:00 INFO  : Context for processor 'microblaze_0' is selected.
+06:23:01 INFO  : Hardware design and registers information is loaded from 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+06:23:01 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+06:23:01 INFO  : Context for processor 'microblaze_0' is selected.
+06:23:01 INFO  : System reset is completed.
+06:23:04 INFO  : 'after 3000' command is executed.
+06:23:04 INFO  : Context for processor 'microblaze_0' is selected.
+06:23:04 INFO  : The application 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+06:23:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+06:23:04 INFO  : Context for processor 'microblaze_0' is selected.
+06:23:04 INFO  : 'con' command is executed.
+06:23:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+06:23:04 INFO  : Launch script is exported to file 'C:\Vivado\lab6_2\lab6_2.1_sdk\mb_usb_system\_ide\scripts\debugger_mb_usb-default.tcl'
+06:24:40 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+06:24:50 INFO  : Disconnected from the channel tcfchan#2.
+06:24:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+06:24:51 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+06:24:51 INFO  : 'jtag frequency' command is executed.
+06:24:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+06:24:52 INFO  : Device configured successfully with "C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+06:24:52 INFO  : Context for processor 'microblaze_0' is selected.
+06:24:53 INFO  : Hardware design and registers information is loaded from 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+06:24:53 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+06:24:53 INFO  : Context for processor 'microblaze_0' is selected.
+06:24:53 INFO  : System reset is completed.
+06:24:56 INFO  : 'after 3000' command is executed.
+06:24:56 INFO  : Context for processor 'microblaze_0' is selected.
+06:24:56 INFO  : The application 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+06:24:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+06:24:56 INFO  : Context for processor 'microblaze_0' is selected.
+06:24:56 INFO  : 'con' command is executed.
+06:24:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+06:24:56 INFO  : Launch script is exported to file 'C:\Vivado\lab6_2\lab6_2.1_sdk\mb_usb_system\_ide\scripts\debugger_mb_usb-default.tcl'
+06:42:34 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+06:42:44 INFO  : Disconnected from the channel tcfchan#3.
+06:42:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+06:42:45 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+06:42:45 INFO  : 'jtag frequency' command is executed.
+06:42:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+06:42:47 INFO  : Device configured successfully with "C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+06:42:47 INFO  : Context for processor 'microblaze_0' is selected.
+06:42:47 INFO  : Hardware design and registers information is loaded from 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+06:42:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+06:42:47 INFO  : Context for processor 'microblaze_0' is selected.
+06:42:47 INFO  : System reset is completed.
+06:42:50 INFO  : 'after 3000' command is executed.
+06:42:50 INFO  : Context for processor 'microblaze_0' is selected.
+06:42:50 INFO  : The application 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+06:42:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+06:42:50 INFO  : Context for processor 'microblaze_0' is selected.
+06:42:50 INFO  : 'con' command is executed.
+06:42:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+06:42:50 INFO  : Launch script is exported to file 'C:\Vivado\lab6_2\lab6_2.1_sdk\mb_usb_system\_ide\scripts\debugger_mb_usb-default.tcl'
+06:43:23 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+06:43:32 INFO  : Disconnected from the channel tcfchan#4.
+06:43:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+06:43:33 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+06:43:33 INFO  : 'jtag frequency' command is executed.
+06:43:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+06:43:34 INFO  : Device configured successfully with "C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+06:43:34 INFO  : Context for processor 'microblaze_0' is selected.
+06:43:35 INFO  : Hardware design and registers information is loaded from 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+06:43:35 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+06:43:35 INFO  : Context for processor 'microblaze_0' is selected.
+06:43:35 INFO  : System reset is completed.
+06:43:38 INFO  : 'after 3000' command is executed.
+06:43:38 INFO  : Context for processor 'microblaze_0' is selected.
+06:43:38 INFO  : The application 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+06:43:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+06:43:38 INFO  : Context for processor 'microblaze_0' is selected.
+06:43:38 INFO  : 'con' command is executed.
+06:43:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+06:43:38 INFO  : Launch script is exported to file 'C:\Vivado\lab6_2\lab6_2.1_sdk\mb_usb_system\_ide\scripts\debugger_mb_usb-default.tcl'
+06:58:39 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+06:59:01 INFO  : Disconnected from the channel tcfchan#5.
+06:59:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+06:59:02 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+06:59:02 INFO  : 'jtag frequency' command is executed.
+06:59:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+06:59:03 INFO  : Device configured successfully with "C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+06:59:03 INFO  : Context for processor 'microblaze_0' is selected.
+06:59:04 INFO  : Hardware design and registers information is loaded from 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+06:59:04 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+06:59:04 INFO  : Context for processor 'microblaze_0' is selected.
+06:59:04 INFO  : System reset is completed.
+06:59:07 INFO  : 'after 3000' command is executed.
+06:59:07 INFO  : Context for processor 'microblaze_0' is selected.
+06:59:07 INFO  : The application 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+06:59:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+06:59:07 INFO  : Context for processor 'microblaze_0' is selected.
+06:59:07 INFO  : 'con' command is executed.
+06:59:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+06:59:07 INFO  : Launch script is exported to file 'C:\Vivado\lab6_2\lab6_2.1_sdk\mb_usb_system\_ide\scripts\debugger_mb_usb-default.tcl'
+07:03:40 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+07:03:54 INFO  : Disconnected from the channel tcfchan#6.
+07:03:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:03:55 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+07:03:55 INFO  : 'jtag frequency' command is executed.
+07:03:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+07:03:56 INFO  : Device configured successfully with "C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+07:03:56 INFO  : Context for processor 'microblaze_0' is selected.
+07:03:57 INFO  : Hardware design and registers information is loaded from 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+07:03:57 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+07:03:57 INFO  : Context for processor 'microblaze_0' is selected.
+07:03:57 INFO  : System reset is completed.
+07:04:00 INFO  : 'after 3000' command is executed.
+07:04:00 INFO  : Context for processor 'microblaze_0' is selected.
+07:04:00 INFO  : The application 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+07:04:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+07:04:00 INFO  : Context for processor 'microblaze_0' is selected.
+07:04:00 INFO  : 'con' command is executed.
+07:04:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+07:04:00 INFO  : Launch script is exported to file 'C:\Vivado\lab6_2\lab6_2.1_sdk\mb_usb_system\_ide\scripts\debugger_mb_usb-default.tcl'
+07:12:37 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+07:12:48 INFO  : Disconnected from the channel tcfchan#7.
+07:12:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:12:49 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+07:12:49 INFO  : 'jtag frequency' command is executed.
+07:12:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+07:12:50 INFO  : Device configured successfully with "C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+07:12:50 INFO  : Context for processor 'microblaze_0' is selected.
+07:12:51 INFO  : Hardware design and registers information is loaded from 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+07:12:51 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+07:12:51 INFO  : Context for processor 'microblaze_0' is selected.
+07:12:51 INFO  : System reset is completed.
+07:12:54 INFO  : 'after 3000' command is executed.
+07:12:54 INFO  : Context for processor 'microblaze_0' is selected.
+07:12:54 INFO  : The application 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+07:12:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+07:12:54 INFO  : Context for processor 'microblaze_0' is selected.
+07:12:54 INFO  : 'con' command is executed.
+07:12:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+07:12:54 INFO  : Launch script is exported to file 'C:\Vivado\lab6_2\lab6_2.1_sdk\mb_usb_system\_ide\scripts\debugger_mb_usb-default.tcl'
+07:48:34 INFO  : Disconnected from the channel tcfchan#8.
+07:51:53 DEBUG : Logs will be stored at 'C:/Vivado/lab6_2/lab6_2.1_sdk/IDE.log'.
+07:51:54 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Vivado\lab6_2\lab6_2.1_sdk\temp_xsdb_launch_script.tcl
+07:51:59 INFO  : Platform repository initialization has completed.
+07:51:59 INFO  : Registering command handlers for Vitis TCF services
+07:51:59 INFO  : XSCT server has started successfully.
+07:52:00 INFO  : Successfully done setting XSCT server connection channel  
+07:52:00 INFO  : plnx-install-location is set to ''
+07:52:00 INFO  : Successfully done query RDI_DATADIR 
+07:52:00 INFO  : Successfully done setting workspace for the tool. 
+07:55:15 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+07:55:41 INFO  : Result from executing command 'removePlatformRepo': 
+07:55:57 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+07:55:57 INFO  : Result from executing command 'getPlatforms': 
+07:55:57 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+07:56:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:56:10 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+07:56:10 INFO  : 'jtag frequency' command is executed.
+07:56:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+07:56:11 INFO  : Device configured successfully with "C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+07:56:11 INFO  : Context for processor 'microblaze_0' is selected.
+07:56:11 INFO  : Hardware design and registers information is loaded from 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+07:56:11 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+07:56:11 INFO  : Context for processor 'microblaze_0' is selected.
+07:56:11 INFO  : System reset is completed.
+07:56:14 INFO  : 'after 3000' command is executed.
+07:56:15 INFO  : Context for processor 'microblaze_0' is selected.
+07:56:15 INFO  : The application 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+07:56:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+07:56:15 INFO  : Context for processor 'microblaze_0' is selected.
+07:56:15 INFO  : 'con' command is executed.
+07:56:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+07:56:15 INFO  : Launch script is exported to file 'C:\Vivado\lab6_2\lab6_2.1_sdk\mb_usb_system\_ide\scripts\debugger_mb_usb-default.tcl'
+07:56:48 INFO  : Disconnected from the channel tcfchan#3.
+07:56:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:56:50 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+07:56:50 INFO  : 'jtag frequency' command is executed.
+07:56:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+07:56:51 INFO  : Device configured successfully with "C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+07:56:51 INFO  : Context for processor 'microblaze_0' is selected.
+07:56:51 INFO  : Hardware design and registers information is loaded from 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+07:56:51 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+07:56:52 INFO  : Context for processor 'microblaze_0' is selected.
+07:56:52 INFO  : System reset is completed.
+07:56:55 INFO  : 'after 3000' command is executed.
+07:56:55 INFO  : Context for processor 'microblaze_0' is selected.
+07:56:55 INFO  : The application 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+07:56:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+07:56:55 INFO  : Context for processor 'microblaze_0' is selected.
+07:56:55 INFO  : 'con' command is executed.
+07:56:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+07:56:55 INFO  : Launch script is exported to file 'C:\Vivado\lab6_2\lab6_2.1_sdk\mb_usb_system\_ide\scripts\debugger_mb_usb-default.tcl'
+08:06:54 INFO  : Disconnected from the channel tcfchan#4.
+08:09:05 DEBUG : Logs will be stored at 'C:/Vivado/lab6_2/lab6_2.1_sdk/IDE.log'.
+08:09:06 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Vivado\lab6_2\lab6_2.1_sdk\temp_xsdb_launch_script.tcl
+08:09:10 INFO  : Platform repository initialization has completed.
+08:09:11 INFO  : Registering command handlers for Vitis TCF services
+08:09:11 INFO  : XSCT server has started successfully.
+08:09:11 INFO  : Successfully done setting XSCT server connection channel  
+08:09:11 INFO  : plnx-install-location is set to ''
+08:09:11 INFO  : Successfully done query RDI_DATADIR 
+08:09:11 INFO  : Successfully done setting workspace for the tool. 
+08:23:30 DEBUG : Logs will be stored at 'C:/Vivado/lab6_2/lab6_2.1_sdk/IDE.log'.
+08:23:31 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Vivado\lab6_2\lab6_2.1_sdk\temp_xsdb_launch_script.tcl
+08:23:35 INFO  : Platform repository initialization has completed.
+08:23:36 INFO  : Registering command handlers for Vitis TCF services
+08:23:36 INFO  : XSCT server has started successfully.
+08:23:36 INFO  : plnx-install-location is set to ''
+08:23:36 INFO  : Successfully done setting XSCT server connection channel  
+08:23:36 INFO  : Successfully done query RDI_DATADIR 
+08:23:36 INFO  : Successfully done setting workspace for the tool. 
+08:24:45 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+08:24:46 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+08:24:46 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+08:25:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+08:25:10 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+08:25:10 INFO  : 'jtag frequency' command is executed.
+08:25:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+08:25:12 INFO  : Device configured successfully with "C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+08:25:12 INFO  : Context for processor 'microblaze_0' is selected.
+08:25:12 INFO  : Hardware design and registers information is loaded from 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+08:25:12 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+08:25:12 INFO  : Context for processor 'microblaze_0' is selected.
+08:25:12 INFO  : System reset is completed.
+08:25:15 INFO  : 'after 3000' command is executed.
+08:25:15 INFO  : Context for processor 'microblaze_0' is selected.
+08:25:15 INFO  : The application 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+08:25:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+08:25:15 INFO  : Context for processor 'microblaze_0' is selected.
+08:25:15 INFO  : 'con' command is executed.
+08:25:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+08:25:15 INFO  : Launch script is exported to file 'C:\Vivado\lab6_2\lab6_2.1_sdk\mb_usb_system\_ide\scripts\debugger_mb_usb-default.tcl'
+09:13:35 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+09:13:44 INFO  : Disconnected from the channel tcfchan#2.
+09:13:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:13:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+09:13:54 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+09:14:24 DEBUG : Logs will be stored at 'C:/Vivado/lab6_2/lab6_2.1_sdk/IDE.log'.
+09:14:25 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Vivado\lab6_2\lab6_2.1_sdk\temp_xsdb_launch_script.tcl
+09:14:30 INFO  : Registering command handlers for Vitis TCF services
+09:14:30 INFO  : Platform repository initialization has completed.
+09:14:31 INFO  : XSCT server has started successfully.
+09:14:31 INFO  : Successfully done setting XSCT server connection channel  
+09:14:31 INFO  : plnx-install-location is set to ''
+09:14:31 INFO  : Successfully done query RDI_DATADIR 
+09:14:31 INFO  : Successfully done setting workspace for the tool. 
+09:14:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:14:41 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+09:14:41 INFO  : 'jtag frequency' command is executed.
+09:14:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+09:14:43 INFO  : Device configured successfully with "C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+09:14:43 INFO  : Context for processor 'microblaze_0' is selected.
+09:14:43 INFO  : Hardware design and registers information is loaded from 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+09:14:43 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:14:43 INFO  : Context for processor 'microblaze_0' is selected.
+09:14:43 INFO  : System reset is completed.
+09:14:46 INFO  : 'after 3000' command is executed.
+09:14:46 INFO  : Context for processor 'microblaze_0' is selected.
+09:14:47 INFO  : The application 'C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+09:14:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Vivado/lab6_2/lab6_2.1_sdk/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+09:14:47 INFO  : Context for processor 'microblaze_0' is selected.
+09:14:47 INFO  : 'con' command is executed.
+09:14:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+09:14:47 INFO  : Launch script is exported to file 'C:\Vivado\lab6_2\lab6_2.1_sdk\mb_usb_system\_ide\scripts\debugger_mb_usb-default.tcl'
+14:31:59 INFO  : Disconnected from the channel tcfchan#1.
