@@ -37,7 +37,7 @@ Design, build, and test digital systems using transistor-transistor logic (TTL),
   Design a simplified microprocessor based on a subset of the LC-3 ISA, featuring 16-bit instructions and registers.
 
 - **Lab 6: MicroBlaze Based SoC Introduction**  
-  Build a simple system-on-chip interfacing with peripherals such as on-board switches and LEDs.
+  Build a simple system-on-chip interfacing with peripherals such as on-board switches and LEDs. Second portion of this lab will require interfacing with display and I/O peripherals, such as HDMI and USB keyboards.
 
 - **Lab 7: HDMI Text Mode Graphics with AXI4-Lite Interface**  
   Create a text mode graphics controller for VGA/HDMI output, evolving from a basic monochrome design to one supporting per-character colors.
